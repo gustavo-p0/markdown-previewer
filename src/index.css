@@ -21,6 +21,8 @@ body {
 /* Mark: main */
 
 .c-main {
+  overflow: auto;
+  max-width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
