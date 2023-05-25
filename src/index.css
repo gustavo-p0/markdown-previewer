@@ -37,10 +37,6 @@ body {
 
 /* Mark: preview */
 
-.c-preview__view {
-  overflow-y: scroll;
-}
-
 /* Mark: common */
 
 .c-form,
@@ -56,6 +52,7 @@ body {
   width: 100%;
   flex-grow: 1;
   scroll-behavior: smooth;
+  overflow: scroll;
 }
 
 ::-webkit-scrollbar {
