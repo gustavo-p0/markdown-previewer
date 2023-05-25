@@ -1,0 +1,105 @@
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 16px;
+}
+
+#root {
+  height: 100%;
+}
+/* Mark: main */
+
+.c-main {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, calc(50% - 16px));
+  gap: 16px;
+}
+
+/* Mark: form */
+.c-form__textarea {
+  resize: none;
+  border: 2px solid black;
+  padding: 8px;
+}
+
+/* Mark: preview */
+
+.c-preview__view {
+  overflow-y: scroll;
+}
+
+/* Mark: common */
+
+.c-form,
+.c-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.c-form__textarea,
+.c-preview__view {
+  width: 100%;
+  flex-grow: 1;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (min-width: 976px) {
+  .c-main {
+    grid-template-columns: repeat(2, calc(50% - 16px));
+    grid-template-rows: 100%;
+  }
+}
+
+/* Mark: general styles for markdown */
+
+.c-preview__view :where(blockquote) {
+  position: relative;
+  padding: 4px 0;
+}
+
+.c-preview__view :where(blockquote)::before {
+  content: "";
+  left: -40px;
+  position: absolute;
+  height: 100%;
+  width: 8px;
+  background-color: #ccc;
+}
+
+.c-preview__view :where(pre) {
+  padding: 4px;
+  background-color: #161b22;
+  border-radius: 2px;
+  color: #c8d1d9;
+}
+
+.c-preview__view :where(img) {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  margin-inline: auto;
+}
