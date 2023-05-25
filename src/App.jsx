@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import remarkGfm from "remark-gfm";
-import rehypeHighlight from "rehype-highlight";
 
 const App = () => {
   const [markdown, setMarkdown] = useState("");
